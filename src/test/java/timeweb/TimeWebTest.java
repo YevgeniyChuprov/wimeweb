@@ -14,7 +14,7 @@ public class TimeWebTest extends TestBase {
     @DisplayName("Проверка перехода с главной на страницу стоимости виртуальногохостинга")
     public void openingVirtualHostingPage() {
         step("Нажимаем на кнопку 'Попробовать бесплатно', блока 'Виртуальный хостинг'", () -> {
-            $("button").shouldHave(text("Попробовать бесплатно")).click();
+            $(By.xpath("//button[contains(text(),'Попробовать бесплатно')]")).click();
         });
         step("Проверяем открытие нужной нам страницы", () -> {
             $("h1").shouldHave(text("Надежный виртуальный хостинг для всех"));
@@ -25,7 +25,7 @@ public class TimeWebTest extends TestBase {
     @DisplayName("Открытие окна оплата услуг")
     public void clickPaymentForServices() {
         step("Нажимаем на ссылку оплата услуг", () -> {
-            $("[data-selenium='header-btn-payment']").click();
+            $("//a[@data-selenium='header-btn-payment']").click();
         });
         step("Проверяем наличие платежной системы ЮMoney", () -> {
             $("div").shouldHave(text("ЮMoney"));
