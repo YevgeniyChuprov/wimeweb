@@ -32,11 +32,12 @@ public class TestBase {
                 "enableVideo", true
         ));
         Configuration.browserCapabilities = capabilities;
-        open("ru/");
+
     }
 
     @BeforeEach
     void addListener() {
+        open("ru/");
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
