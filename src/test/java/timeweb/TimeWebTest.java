@@ -73,10 +73,7 @@ public class TimeWebTest extends TestBase {
             $(By.xpath("//a[@data-selenium='header-menu-btn-domains']")).click();
         });
         step("Вводим в инпут название домена занятость которого хотим проверить", () -> {
-            $("#domain-search-input").setValue("test.ru");
-        });
-        step("Нажимаем кнопку проверить домены", () -> {
-            $(By.xpath("//a[text()='Проверить домены']/..")).click();
+            $("#domain-search-input").setValue("test.ru").pressEnter();
         });
         step("Проверяем наличие домена в результатах", () -> {
             $(By.xpath("//strong[text()='test.ru']")).shouldHave(text("test.ru"));
