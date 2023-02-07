@@ -23,7 +23,7 @@ public class TestBase {
         Configuration.browserVersion = System.getProperty("browserVersion", "100");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.baseUrl = System.getProperty("base_url", "https://timeweb.com/");
-        Configuration.timeout = 10000;
+        Configuration.timeout = 30000;
         Configuration.remote = System.getProperty("remoteUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -35,10 +35,10 @@ public class TestBase {
         open("ru/");
     }
 
-//    @BeforeEach
-//    void addListener() {
-//        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-//    }
+    @BeforeEach
+    void addListener() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+    }
 
 
     @AfterEach
