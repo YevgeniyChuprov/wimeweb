@@ -25,7 +25,7 @@ public class TimeWebTest extends TestBase {
     @DisplayName("Открытие окна оплата услуг")
     public void clickPaymentForServices() {
         step("Нажимаем на ссылку оплата услуг", () -> {
-            $("//a[@data-selenium='header-btn-payment']").click();
+            $(By.xpath("//a[@data-selenium='header-btn-payment']")).click();
         });
         step("Проверяем наличие платежной системы ЮMoney", () -> {
             $("div").shouldHave(text("ЮMoney"));
@@ -53,7 +53,7 @@ public class TimeWebTest extends TestBase {
     @DisplayName("Все тарифы 1С-Битрикс")
     public void all1CBitrixTariffs() {
         step("Переходим по ссылке", () -> {
-            $(By.xpath("[data-selenium='header-menu-btn-bitrix']")).click();
+            $(By.xpath("//a[data-selenium='header-menu-btn-bitrix']")).click();
         });
         step("Проверяем открытие страницы", () -> {
             $("h1").shouldHave(text("Хостинг для 1С-Битрикс"));
