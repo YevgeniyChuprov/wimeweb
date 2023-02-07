@@ -70,7 +70,7 @@ public class TimeWebTest extends TestBase {
     @DisplayName("Проверка свободного домена")
     public void checkFreeDomain() {
         step("Нажимаем кнопку домены в хедере", () -> {
-            $("[data-selenium='header-menu-btn-domains']").click();
+            $("//a[@data-selenium='header-menu-btn-domains']").click();
         });
         step("Вводим в инпут название домена занятость которого хотим проверить", () -> {
             $("#domain-search-input").setValue("test.ru");
