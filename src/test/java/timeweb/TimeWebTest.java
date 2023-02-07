@@ -53,7 +53,7 @@ public class TimeWebTest extends TestBase {
     @DisplayName("Все тарифы 1С-Битрикс")
     public void all1CBitrixTariffs() {
         step("Переходим по ссылке", () -> {
-            $(By.xpath("//a[data-selenium='header-menu-btn-bitrix']")).click();
+            $(By.xpath("//a[@data-selenium='header-menu-btn-bitrix']")).click();
         });
         step("Проверяем открытие страницы", () -> {
             $("h1").shouldHave(text("Хостинг для 1С-Битрикс"));
