@@ -76,7 +76,7 @@ public class TimeWebTest extends TestBase {
             $("#domain-search-input").setValue("test.ru");
         });
         step("Нажимаем кнопку проверить домены", () -> {
-            $(By.xpath("//div[@class='right d']")).shouldHave(text("ПРОВЕРИТЬ ДОМЕНЫ")).click();
+            $(By.xpath("//a[text()='Проверить домены']")).shouldHave(text("ПРОВЕРИТЬ ДОМЕНЫ")).click();
         });
         step("Проверяем наличие домена в результатах", () -> {
             $(By.xpath("//strong[text()='test.ru']")).shouldHave(text("test.ru"));
