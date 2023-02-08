@@ -60,13 +60,13 @@ test
 
 ### <img src="./images/icons/allure-Report-logo.svg" width="50" height="50"/> Сформированный отчет **"Allure Report"**
 
- <img src="images/Allure_Report.PNG" width="80%" height="80%"/>
+ <img src="./images/Allure_Report.PNG" width="80%" height="80%"/>
 
- <img src="images/allure-behaviors.PNG" width="80%" height="80%"/>
+ <img src="./images/allure-behaviors.PNG" width="80%" height="80%"/>
 
 ### <img src="./images/icons/Telegram.svg" width="50" height="50"/> Уведомления в Telegram с использованием бота
 
-<img src="images/telegram.PNG" width="50%" height="50%" />  
+<img src="./images/telegram.PNG" width="50%" height="50%" />  
 
 К каждому тесту в отчете прилагается видео.
 <p align="center">
